@@ -1,0 +1,12 @@
+index.html
+{
+    <button onclick="window.location.href='/login'">Log In
+			<img src="/Images/16by9_small.png"/>
+		</button>
+		<button onclick="window.location.href='/register'">New to this site?
+			<img src="/Images/16by9_small.png"/>
+		</button>
+		<br>
+		<br>
+    }
+
