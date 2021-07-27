@@ -1,2 +1,2 @@
-# superbeelavaman.github.io
+# site.superbeelavaman.tk
 ## My Website
