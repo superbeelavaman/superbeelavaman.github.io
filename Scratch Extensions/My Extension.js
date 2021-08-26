@@ -23,9 +23,15 @@ class MyExtension {
           // `opcode` is the internal ID of the block
           // It should never change!
           // It corresponds to the class method with the same name.
-          opcode: 'hello',
+          opcode: 'Test',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'Hello, world!'
+          text: 'Value 1 [VALUE1] Value 2 [VALUE2]'
+          arguments: {
+             VALUE1: {
+              type: ArgumentType.BOOLEAN
+             VALUE2: {
+              type: ArgumentType.STRING
+              defaultValue: 'text' 
         }
       ]
     };
@@ -34,11 +40,11 @@ class MyExtension {
   /**
    * Corresponds to `opcode: 'hello'` above
    */
-  hello() {
+  test (args) {
     // You can just return a value: any string, boolean, or number will work.
     // If you have to perform an asynchronous action like a request, just return a Promise.
     // The block will wait until the Promise resolves and return the resolved value.
-    return 'Hello, world!';
+    return str(args.VALUE1) + args.VALUE2;
   }
 }
 
