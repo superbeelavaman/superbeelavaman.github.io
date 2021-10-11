@@ -1,0 +1,15 @@
+<!DOCTYPEhtml>
+<html>
+  <body>
+    <script>
+      function DisplayHtml() {
+        var HtmlTextInput = document.getElementById('HtmlTextInput').innerHTML
+        document.getElementById('htmlbox').innerHTML = HtmlTextInput
+      }
+    </script>
+    <textarea rows = "80" cols = "60" id = "HtmlTextInput">
+            Type HTML here...
+    </textarea><br>
+    <input type = "button" value = "Convert" onclick = "DisplayHtml">
+    <form id = "htmlbox">
+    </form>
