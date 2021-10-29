@@ -14,7 +14,7 @@
         <script>
             function ReplaceHtml() {
                 document.getElementById('Page Data').innerHTML = str1;
-            }
+            };
             function ITGuy() {
                 setTimeout(() => {
                     document.getElementById('Errors').innerHTML = '<p style="color:red" id="Errors"><b>Errors:</b> 2; ["Records Error", "Temporarily Disabled"]</p>';
@@ -25,7 +25,7 @@
                         }, 2000);
                     }, 10000;
                 }, 5000);
-            }
+            };
     
             var str1 = `
             <form id="Page Data">
@@ -56,7 +56,7 @@
     
                 </fieldset>
             </form>
-            <input type="button" onclick="ITGuy()"></input>`
+            <input type="button" onclick="ITGuy()"></input>`;
         </script>
     
         <form id="Page Data">
