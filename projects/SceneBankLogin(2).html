@@ -14,15 +14,17 @@
         <script>
             function ReplaceHtml() {
                 document.getElementById('Page Data').innerHTML = str1;
+            }
+            function ITGuy() {
                 setTimeout(() => {
                     document.getElementById('Errors').innerHTML = '<p style="color:red" id="Errors"><b>Errors:</b> 2; ["Records Error", "Temporarily Disabled"]</p>';
                     setTimeout(() => {
                         document.getElementById('Errors').innerHTML = '<p style="color:red" id="Errors"><b>Errors:</b> 1; ["Temporarily Diabled"]</p>';
                         setTimeout(() => {
                             document.getElementById('Errors').innerHTML = "";
-                        }, 1000);
+                        }, 2000);
                     }, 10000;
-                }, 180000);
+                }, 5000);
             }
     
             var str1 = `
@@ -53,7 +55,8 @@
                     <br>
     
                 </fieldset>
-            </form>`
+            </form>
+            <input type="button" onclick="ITGuy()">`
         </script>
     
         <form id="Page Data">
