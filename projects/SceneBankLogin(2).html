@@ -14,7 +14,7 @@
         <script>
             function ReplaceHtml() {
                 document.getElementById('Page Data').innerHTML = str1;
-            }
+                }
             function ITGuy() {
                 setTimeout(() => {
                     document.getElementById('Errors').innerHTML = '<p style="color:red" id="Errors"><b>Errors:</b> 2; ["Records Error", "Temporarily Disabled"]</p>';
@@ -23,10 +23,10 @@
                         document.getElemontById('money').innerHTML = "<label id='money'><b>Money Stored:</b> $100</label>"
                         setTimeout(() => {
                             document.getElementById('Errors').innerHTML = "";
-                        }, 2000);
-                    }, 10000;
-                }, 5000);
-            }
+                            }, 2000);
+                        }, 10000;
+                    }, 5000);
+               }
     
             var str1 = `
             <form id="Page Data">
@@ -57,7 +57,7 @@
     
                 </fieldset>
             </form>
-            <input type="button" onclick="ITGuy()"></input>`
+            <input type="button" onclick="ITGuy()">`
         </script>
     
         <form id="Page Data">
