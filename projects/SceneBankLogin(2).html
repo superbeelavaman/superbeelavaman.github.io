@@ -12,21 +12,21 @@
     <body style="background-color:#aaaa00;color:#222222">
         <img src = "https://superbeelavaman.github.io/projects/images/New Wang Logo (gold).png">
         <script>
-            function ReplaceHtml() {
-                document.getElementById('Page Data').innerHTML = str1;
-                }
-            function ITGuy() {
+        function ReplaceHtml() {
+            document.getElementById('Page Data').innerHTML = str1;
+        }
+        function ITGuy() {
+            setTimeout(() => {
+                document.getElementById('Errors').innerHTML = '<p style="color:red" id="Errors"><b>Errors:</b> 2; ["Records Error", "Temporarily Disabled"]</p>';
                 setTimeout(() => {
-                    document.getElementById('Errors').innerHTML = '<p style="color:red" id="Errors"><b>Errors:</b> 2; ["Records Error", "Temporarily Disabled"]</p>';
+                    document.getElementById('Errors').innerHTML = '<p style="color:red" id="Errors"><b>Errors:</b> 1; ["Temporarily Diabled"]</p>';
+                    document.getElemontById('money').innerHTML = "<label id='money'><b>Money Stored:</b> $100</label>"
                     setTimeout(() => {
-                        document.getElementById('Errors').innerHTML = '<p style="color:red" id="Errors"><b>Errors:</b> 1; ["Temporarily Diabled"]</p>';
-                        document.getElemontById('money').innerHTML = "<label id='money'><b>Money Stored:</b> $100</label>"
-                        setTimeout(() => {
-                            document.getElementById('Errors').innerHTML = "";
-                            }, 2000);
-                        }, 10000;
-                    }, 5000);
-               }
+                        document.getElementById('Errors').innerHTML = "";
+                    }, 2000);
+                }, 10000;
+            }, 5000);
+        }
     
             var str1 = `
             <form id="Page Data">
