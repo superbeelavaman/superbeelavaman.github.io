@@ -16,6 +16,7 @@
             document.getElementById('Page Data').innerHTML = str1;
         }
         function ITGuy() {
+            document.getElementById('ITGuy').innerHTML = ''
             setTimeout(() => {
                 document.getElementById('Errors').innerHTML = '<label style="color:red" id="Errors"><br><b>Errors:</b> 2; ["Records Error", "Temporarily Disabled"]</label>';
                 setTimeout(() => {
@@ -68,7 +69,7 @@
             <br>
             <br>
             <br>
-            <input type="button" onclick="ITGuy()">`
+            <input id="ITGuy" type="button" onclick="ITGuy()">`
         </script>
     
         <form id="Page Data">
