@@ -17,9 +17,9 @@
         }
         function ITGuy() {
             setTimeout(() => {
-                document.getElementById('Errors').innerHTML = '<label style="color:red" id="Errors"><b>Errors:</b> 2; ["Records Error", "Temporarily Disabled"]</label>';
+                document.getElementById('Errors').innerHTML = '<label style="color:red" id="Errors"><b>Errors:</b> 2; ["Records Error", "Temporarily Disabled"]<br></label>';
                 setTimeout(() => {
-                    document.getElementById('Errors').innerHTML = '<label style="color:red" id="Errors"><b>Errors:</b> 1; ["Temporarily Diabled"]</label>';
+                    document.getElementById('Errors').innerHTML = '<label style="color:red" id="Errors"><b>Errors:</b> 1; ["Temporarily Diabled"]<br></label>';
                     document.getElementById('money').innerHTML = "<label id='money'><b>Money Stored:</b> $1,048,676</label>"
                     setTimeout(() => {
                         document.getElementById('Errors').innerHTML = "";
@@ -52,11 +52,9 @@
                     <br>
                     
                     <div>
-                        <label style="color:red" id="Errors"><b>Errors:</b> 1; ["Records Error"]</label>
+                        <label style="color:red" id="Errors"><b>Errors:</b> 1; ["Records Error"]<br></label>
                     </div>
-    
-                    <br>
-    
+
                 </fieldset>
             </form>
             <br>
