@@ -1,8 +1,8 @@
 const canvas = document.querySelector('canvas');
-const c = canvas.getContext('2d')
+const c = canvas.getContext('2d');
 
-canvas.width = innerWidth
-canvas.height = innerHeight
+canvas.width = innerWidth;
+canvas.height = innerHeight;
 
 class Player {
   cosntructor(x, y, radius, color) {
@@ -18,5 +18,5 @@ class Player {
   }
 }
 
-const player = new Player(100, 100, 30, 'green')
-player.draw()
+const player = new Player(100, 100, 30, 'green');
+player.draw();
