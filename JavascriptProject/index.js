@@ -19,4 +19,3 @@ class Player {
 }
 
 const player = new Player(100, 100, 30, 'green');
-player.draw();
