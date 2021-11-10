@@ -2,7 +2,7 @@ var canvas = document.getElementById('Game');
 var ctx = canvas.getContext('2d');
 
 canvas.width = innerWidth;
-canvas.height = innerHeight;
+canvas.height = innerHeight - 100;
 
 class Player {
   cosntructor(x, y, radius, color) {
