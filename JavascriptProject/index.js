@@ -1,5 +1,5 @@
-var canvas = document.getElementById('Game');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById('Game');
+const ctx = canvas.getContext('2d');
 
 canvas.width = innerWidth;
 canvas.height = innerHeight;
