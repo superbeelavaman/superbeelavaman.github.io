@@ -18,8 +18,7 @@
             document.getElementById('Page Data').innerHTML = str1;
             document.getElementById('title').innerHTML = 'About Jerry'
         }
-        function ITGuy() {
-            document.getElementById('ITbutton').innerHTML = ''
+        addEventListener('click', () => {
             setTimeout(() => {
                 document.getElementById('Errors').innerHTML = '<label style="color:red" id="Errors"><br><b>Errors:</b> 2; ["Records Error", "Temporarily Disabled"]</label>';
                 setTimeout(() => {
@@ -58,33 +57,7 @@
                     </div>
 
                 </fieldset>
-            </form>
-            
-            <p id='ITbutton'>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <input type="button" onclick="ITGuy()">
-            </p>
-            `
+            </form>`
         </script>
     
         <form id="Page Data">
