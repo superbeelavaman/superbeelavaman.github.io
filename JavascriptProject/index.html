@@ -1,9 +1,42 @@
-<!doctype html>
+<!DOCTYPEhtml>
 <style>
     body {
-        height: 0;
         margin: 0;
+        background-color: #cc9900;
+        background-image: url('./Images/Background.png');
+    }
+
+    div {
+        background-color: #ffaa00;
+        width: 510px;
+        border: 5px solid #ff8800;
+        padding: 50px;
+        margin: auto;
+    }
+    iframe {
+        background-color: #000000;
+    }
+    fieldset {
+        background-color: #ff8800;
+        width: 485px;
+    }
+    h3 {
+        margin: 5px;
     }
 </style>
-<canvas></canvas>
-<script src="./index.js"></script>
+<body>
+    <div>
+        <center><h1><b>Games</b></h1></center>
+        <fieldset>
+            <center><h3><b>Spheroid Invasion</b></h3></center>
+            <iframe id="SpheroidInvasion" src="./Game.html" allowtransparency="false" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <button onclick="location = './Game.html'"><img src='./Images/fullscreen.png'></button>
+            <button onclick="document.getElementById('SpheroidInvasion').src = document.getElementById('SpheroidInvasion').src"><img src='./Images/refresh.png'></button>
+            <h4><b>Instructions:</b></h4>
+            <p>
+                Point the cannon using the mouse. Click to fire. Press <img src='./Images/refresh.png'> to reset. <br>
+                Press <img src='./Images/fullscreen.png'> to go to full screen. Note: this restarts the game. <br>
+            </p>
+        </fieldset>
+    </div>
+</body>
