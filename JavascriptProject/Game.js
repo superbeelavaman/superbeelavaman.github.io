@@ -168,6 +168,7 @@ function animate() {
 
         if (dist < enemy.radius + player.radius) {
             cancelAnimationFrame(animationId)
+            alert('You Died!')
         }
 
         if (enemy.x + enemy.radius < 0 ||
