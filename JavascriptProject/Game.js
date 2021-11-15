@@ -169,6 +169,9 @@ function animate() {
         if (dist < enemy.radius + player.radius) {
             cancelAnimationFrame(animationId)
             alert('You Died!')
+            let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+width=600,height=300,left=100,top=100`;
+            open('/', 'test', params);
         }
 
         if (enemy.x + enemy.radius < 0 ||
