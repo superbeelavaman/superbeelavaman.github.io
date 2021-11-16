@@ -1,5 +1,4 @@
 const canvas = document.querySelector('canvas')
-canvas.requestFullScreen()
 const c = canvas.getContext('2d')
 
 canvas.width = innerWidth
