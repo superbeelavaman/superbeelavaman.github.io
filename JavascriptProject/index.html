@@ -31,6 +31,17 @@
         }
         h3 {
             margin: 5px;
+        }
+        .button {
+      border: none;
+      padding: 0 0;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
     </style>
 </head>
 <body>
@@ -40,8 +51,8 @@
         <fieldset>
             <center><h3><b>Spheroid Invasion</b></h3></center>
             <iframe id="SpheroidInvasion" src="./Game.html" allowtransparency="false" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-            <button onclick="location = './Game.html'"><img src='./Images/fullscreen.png'></button>
-            <button onclick="document.getElementById('SpheroidInvasion').src = document.getElementById('SpheroidInvasion').src"><img src='./Images/refresh.png'></button>
+            <button class='button' onclick="location = './Game.html'"><img src='./Images/fullscreen.png'></button>
+            <button class='button' onclick="document.getElementById('SpheroidInvasion').src = document.getElementById('SpheroidInvasion').src"><img src='./Images/refresh.png'></button>
             <h4><b>Instructions:</b></h4>
             <p>
                 Point the cannon using the mouse. Click to fire. Press <img src='./Images/refresh.png'> to reset. <br>
