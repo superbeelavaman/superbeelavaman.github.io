@@ -169,10 +169,10 @@ function animate() {
 
         if (dist < enemy.radius + player.radius) {
             cancelAnimationFrame(animationId)
-            let respawn = confirm('You Died! Respawn?')
-            if (respawn) {
-                location.reload()
-            }
+            //let respawn = confirm('You Died! Respawn?')
+            //if (respawn) {
+            //    location.reload()
+            //}
         }
 
         if (enemy.x + enemy.radius < 0 ||
