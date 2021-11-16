@@ -172,7 +172,7 @@ function animate() {
             //let respawn = confirm('You Died! Respawn?')
             //if (respawn) {
             //    location.reload()
-            //}
+            ///}
         }
 
         if (enemy.x + enemy.radius < 0 ||
