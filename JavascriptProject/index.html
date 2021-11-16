@@ -48,5 +48,11 @@
                 Press <img src='./Images/fullscreen.png'> to go to full screen. Note: this restarts the game. <br>
             </p>
         </fieldset>
+        <fieldset>
+            <center><h3><b>Dino</b></h3></center>
+            <iframe id="Dino" src="chrome://dino" allowtransparency="false" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <button onclick="location = 'chrome://dino'"><img src='./Images/fullscreen.png'></button>
+            <button onclick="document.getElementById('Dino').src = document.getElementById('Dino').src"><img src='./Images/refresh.png'></button>
+        </fieldset>
     </div>
 </body>
