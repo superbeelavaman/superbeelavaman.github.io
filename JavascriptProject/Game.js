@@ -208,6 +208,7 @@ function animate() {
             }
         })
     })
+    c.fillStyle = 'white'
     c.fillText(`Score: ${score}`, 10, 10, 120)
 }
 
