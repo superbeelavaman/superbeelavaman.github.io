@@ -208,7 +208,7 @@ function animate() {
         })
     })
     c.fillStyle = 'white'
-    c.fillText(`Score: ${score}`, 10, 10, 120)
+    c.fillText(`Score: ${score}`, 10, 10)
 }
 
 addEventListener('click', (event) => {
