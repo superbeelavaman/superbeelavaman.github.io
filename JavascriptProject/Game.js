@@ -1,5 +1,8 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
+c.font = 'italic 400 12px, sans-serif';
+
+let score = 0
 
 canvas.width = innerWidth
 canvas.height = innerHeight
@@ -186,7 +189,9 @@ function animate() {
         projectiles.forEach((projectile, pIndex) => {
             dist = Math.hypot(projectile.x - enemy.x, projectile.y - enemy.y)
             if (dist < enemy.radius + projectile.radius) {
-
+                
+                score += 1
+                
                 for (let i = 0; i < 16; i++) {
                     particles.push(new Particle(projectile.x, projectile.y, Math.random() + 2.5, enemy.color, { x: Math.random() * 6 - 3, y: Math.random() * 6 - 3 }))
                 }
@@ -203,6 +208,7 @@ function animate() {
             }
         })
     })
+    c.fillText(`Score: {$score}`, 10, 10, 120)
 }
 
 addEventListener('click', (event) => {
