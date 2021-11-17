@@ -171,7 +171,7 @@ function animate() {
 
         if (dist < enemy.radius + player.radius) {
             cancelAnimationFrame(animationId)
-            let respawn = confirm('You Died! Respawn?')
+            let respawn = confirm(`You died with a score of ${score}! Respawn?`)
             if (respawn) {
                 location.reload()
             }
