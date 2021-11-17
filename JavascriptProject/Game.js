@@ -1,6 +1,6 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
-c.font = 'italic 400 12px, sans-serif';
+c.font = 'italic 400 50px, sans-serif';
 
 let score = 0
 
@@ -190,8 +190,6 @@ function animate() {
             dist = Math.hypot(projectile.x - enemy.x, projectile.y - enemy.y)
             if (dist < enemy.radius + projectile.radius) {
                 
-                score += 1
-                
                 for (let i = 0; i < 16; i++) {
                     particles.push(new Particle(projectile.x, projectile.y, Math.random() + 2.5, enemy.color, { x: Math.random() * 6 - 3, y: Math.random() * 6 - 3 }))
                 }
@@ -200,6 +198,7 @@ function animate() {
                         gsap.to(enemy, {radius: enemy.radius - 10})
                     }
                     else {
+                        score += 1
                         enemies.splice(eIndex, 1)
                     }
                     projectiles.splice(pIndex, 1)
