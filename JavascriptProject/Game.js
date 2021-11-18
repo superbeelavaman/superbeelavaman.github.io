@@ -1,6 +1,5 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
-c.font = 'italic 400 50px, sans-serif';
 
 let score = 0
 
@@ -207,6 +206,7 @@ function animate() {
             }
         })
     })
+    c.font = 'italic 400 50px, sans-serif';
     c.fillStyle = 'white'
     c.fillText(`Score: ${score}`, 10, 10)
 }
