@@ -1,6 +1,7 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
+const music = new Audio('./sound/music.wav');
 let score = 10
 
 canvas.width = innerWidth
@@ -103,6 +104,12 @@ const player = new Player(x, y, 15, 'white')
 const projectiles = []
 const enemies = []
 const particles = []
+
+function playMusic() {
+    setInterval(() => {
+        music.play();
+    },16000)
+}
 
 let spawnSpeed = 2000
 function spawnEnemies() {
@@ -228,3 +235,4 @@ addEventListener('click', (event) => {
 
 animate()
 spawnEnemies()
+playMusic()
