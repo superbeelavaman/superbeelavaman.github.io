@@ -104,8 +104,12 @@ const projectiles = []
 const enemies = []
 const particles = []
 
+let spawnSpeed = 2000
 function spawnEnemies() {
     setInterval(() => {
+        
+        spawnSpeed *= 0.9
+        
         const radius = Math.random() * 20 + 15
 
         let x
@@ -128,7 +132,7 @@ function spawnEnemies() {
             y: Math.sin(angle)
         }
         enemies.push(new Enemy(x, y, radius, color, velocity))
-    }, 2000)
+    }, spawnSpeed)
 }
 
 let animationId
