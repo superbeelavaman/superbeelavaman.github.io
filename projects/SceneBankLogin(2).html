@@ -21,7 +21,7 @@
         function FixAct() {
             document.getElementById('IT').innerHTML = ''
             setTimeout(() => {
-                document.getElementById('Errors').innerHTML = '<label style="color:red" id="Errors"><br><b>Errors:</b> 2; ["Records Error", "Temporarily Disabled"]</label>';
+                document.getElementById('Errors').innerHTML = '<label style="color:red" id="Errors"><br><b>Errors:</b> 2; ["Records Error: bit flip detected", "Temporarily Disabled"]</label>';
                 setTimeout(() => {
                     document.getElementById('Errors').innerHTML = '<label style="color:red" id="Errors"><br><b>Errors:</b> 1; ["Temporarily Diabled"]</label>';
                     document.getElementById('money').innerHTML = "<label id='money'><b>Money Stored:</b> $1,048,678</label>"
@@ -54,7 +54,7 @@
                     </div>
 
                     <div>
-                        <label style="color:red" id="Errors"><br><b>Errors:</b> 1; ["Records Error"]</label>
+                        <label style="color:red" id="Errors"><br><b>Errors:</b> 1; ["Records Error: bit flip detected"]</label>
                     </div>
 
                 </fieldset>
@@ -98,15 +98,6 @@
                 </div>
                 <div>
                     <input id="ActNbr" type="text">
-                </div>
-    
-                <br>
-    
-                <div>
-                    <label><b>Address:</b></label>
-                </div>
-                <div>
-                    <input id="Address" type="text">
                 </div>
     
                 <br>
