@@ -213,7 +213,8 @@ function animate() {
     })
     c.font = '30px DSEG14';
     c.fillStyle = 'white'
-    c.fillText(`Score: ${score}`, 10, 40)
+    c.fillText(`Score:${score}`, 10, 40)
+    c.filltext(`Try not to die!`, 10, 80)
 }
 
 addEventListener('click', (event) => {
