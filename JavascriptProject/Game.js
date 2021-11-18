@@ -214,6 +214,7 @@ function animate() {
     c.font = 'italic 400 50px, sans-serif';
     c.fillStyle = 'white'
     c.fillText(`Score: ${score}`, 10, 10)
+    c.fillText(spawnSpeed, 10, 50)
 }
 
 addEventListener('click', (event) => {
