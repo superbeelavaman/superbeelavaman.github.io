@@ -1,7 +1,7 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-let score = 0
+let score = 10
 
 canvas.width = innerWidth
 canvas.height = innerHeight
@@ -194,11 +194,11 @@ function animate() {
                 }
                 setTimeout(() => {
                     if (enemy.radius > 20) {
-                        score += 0.5
+                        score += 5
                         gsap.to(enemy, {radius: enemy.radius - 10})
                     }
                     else {
-                        score += 1
+                        score += 10
                         enemies.splice(eIndex, 1)
                     }
                     projectiles.splice(pIndex, 1)
@@ -213,6 +213,7 @@ function animate() {
 }
 
 addEventListener('click', (event) => {
+    score -= 1
     const angle = Math.atan2(event.clientY - canvas.height / 2, event.clientX - canvas.width / 2)
     const velocity = {
         x: 5 * Math.cos(angle),
