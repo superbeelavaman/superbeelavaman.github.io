@@ -211,7 +211,7 @@ function animate() {
             }
         })
     })
-    c.font = '100px, sans-serif';
+    c.font = '30px Arial';
     c.fillStyle = 'white'
     c.fillText(`Score: ${score}`, 10, 10)
 }
