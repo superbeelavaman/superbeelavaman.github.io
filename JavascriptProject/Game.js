@@ -194,6 +194,7 @@ function animate() {
                 }
                 setTimeout(() => {
                     if (enemy.radius > 20) {
+                        score += 0.5
                         gsap.to(enemy, {radius: enemy.radius - 10})
                     }
                     else {
