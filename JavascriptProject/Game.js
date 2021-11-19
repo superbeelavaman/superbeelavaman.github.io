@@ -111,7 +111,7 @@ function playMusic() {
     },16000)
 }
 
-let spawnSpeed = 1
+let spawnSpeed = 0.5
 let spawnRate = 2000
 function spawnEnemies() {
     setInterval(() => {
@@ -140,7 +140,7 @@ function spawnEnemies() {
         enemies.push(new Enemy(x, y, radius, color, velocity))
         
         spawnRate *= 0.9
-        spawnSpeed += 0.05
+        spawnSpeed += 0.01
     }, spawnRate)
 }
 
