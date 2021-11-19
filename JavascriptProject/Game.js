@@ -219,7 +219,7 @@ function animate() {
         })
     })
     c.font = '30px DSEG14';
-    c.fillStyle = 'rgba(1, 0, 0, 1)'
+    c.fillStyle = 'rgba(255, 0, 0, 1)'
     c.fillText(`Score:!${score}`, 10, 40)
 }
 
