@@ -221,10 +221,10 @@ function animate() {
         })
     })
     c.font = '30px DSEG14';
-    c.fillStyle = 'rgba(64, 64, 64, 1)'
+    c.fillStyle = 'rgba(64, 0, 0, 1)'
     c.fillText(`~~~~~:~~~~~`, 10, 40)
     c.font = '30px DSEG14';
-    c.fillStyle = 'white'
+    c.fillStyle = 'rgba(255, 0, 0, 1'
     c.fillText(`Score:${score}`, 10, 40)
 }
 
