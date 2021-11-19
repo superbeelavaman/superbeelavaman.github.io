@@ -111,11 +111,10 @@ function playMusic() {
     },16000)
 }
 
-let spawnSpeed = 2000
+let spawnSpeed = 1
+let spawnRate = 2000
 function spawnEnemies() {
     setInterval(() => {
-        
-        spawnSpeed *= 0.9
         
         const radius = Math.random() * 20 + 15
 
@@ -135,11 +134,14 @@ function spawnEnemies() {
      
         const angle = Math.atan2(canvas.height / 2 - y, canvas.width / 2 - x)
         const velocity = {
-            x: Math.cos(angle),
-            y: Math.sin(angle)
+            x: Math.cos(angle) * spawnSpeed,
+            y: Math.sin(angle) * spawnSpeed
         }
         enemies.push(new Enemy(x, y, radius, color, velocity))
-    }, spawnSpeed)
+        
+        spawnRate *= 0.9
+        spawnSpeed += 0.05
+    }, spawnRate)
 }
 
 let animationId
