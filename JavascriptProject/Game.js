@@ -106,13 +106,13 @@ const projectiles = []
 const enemies = []
 const particles = []
 
-let colon = ':'
+let bColon = ':'
 function blinkColon() {
     setInterval(() => {
-        if (colon == ':') {
-            colon = ' '
+        if (bColon == ':') {
+            bColon = ' '
         } else {
-            colon = ':'
+            bColon = ':'
         }
     },1000)
 }
@@ -239,9 +239,8 @@ function animate() {
     c.font = '30px DSEG14';
     c.fillStyle = 'rgba(64, 0, 0, 1)'
     c.fillText(`~~~~~:~~~~~`, 10, 40)
-    c.font = '30px DSEG14';
     c.fillStyle = 'rgba(255, 0, 0, 1'
-    c.fillText(`Score${colon}${scoreText}`, 10, 40)
+    c.fillText(`Score${bColon}${scoreText}`, 10, 40)
 }
 
 addEventListener('click', (event) => {
