@@ -221,7 +221,7 @@ function animate() {
         })
     })
     c.font = '30px DSEG14';
-    c.fillStyle = 'dark gray'
+    c.fillStyle = 'rgba(64, 64, 64, 1)'
     c.fillText(`~~~~~:~~~~~`, 10, 40)
     c.font = '30px DSEG14';
     c.fillStyle = 'white'
