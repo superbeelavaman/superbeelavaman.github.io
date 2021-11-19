@@ -145,7 +145,7 @@ function spawnEnemies() {
 let animationId
 function animate() {
     animationId = requestAnimationFrame(animate)
-    c.fillStyle = 'rgba(0, 0, 0, 0.3)'
+    c.fillStyle = 'rgba(0, 0, 0, 0.1)'
     c.fillRect(0, 0, canvas.width, canvas.height)
     player.draw()
     projectiles.forEach((projectile, pIndex) => {
@@ -219,7 +219,7 @@ function animate() {
         })
     })
     c.font = '30px DSEG14';
-    c.fillStyle = 'rgba(255, 255, 355, 0.4'
+    c.fillStyle = 'white'
     c.fillText(`Score:!${score}`, 10, 40)
 }
 
