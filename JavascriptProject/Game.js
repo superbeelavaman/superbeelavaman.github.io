@@ -3,6 +3,7 @@ const c = canvas.getContext('2d')
 
 const music = new Audio('./sound/music.wav');
 let score = 10
+let scoreText = '10'
 
 canvas.width = innerWidth
 canvas.height = innerHeight
@@ -220,12 +221,16 @@ function animate() {
             }
         })
     })
+    scoreText = String(score)
+    while (scoreText.length < 5) {
+        scoreText = '!' + scoreText
+    }
     c.font = '30px DSEG14';
     c.fillStyle = 'rgba(64, 0, 0, 1)'
     c.fillText(`~~~~~:~~~~~`, 10, 40)
     c.font = '30px DSEG14';
     c.fillStyle = 'rgba(255, 0, 0, 1'
-    c.fillText(`Score:${score}`, 10, 40)
+    c.fillText(`Score:${scoreText}`, 10, 40)
 }
 
 addEventListener('click', (event) => {
