@@ -106,6 +106,17 @@ const projectiles = []
 const enemies = []
 const particles = []
 
+let colon = ':'
+function blinkColon() {
+    setInterval(() => {
+        if (colon == ':') {
+            colon = ' '
+        } else {
+            colon = ':'
+        }
+    },1000)
+}
+
 function playMusic() {
     setInterval(() => {
         music.play();
@@ -230,7 +241,7 @@ function animate() {
     c.fillText(`~~~~~:~~~~~`, 10, 40)
     c.font = '30px DSEG14';
     c.fillStyle = 'rgba(255, 0, 0, 1'
-    c.fillText(`Score:${scoreText}`, 10, 40)
+    c.fillText(`Score${colon}${scoreText}`, 10, 40)
 }
 
 addEventListener('click', (event) => {
@@ -245,4 +256,5 @@ addEventListener('click', (event) => {
 
 animate()
 spawnEnemies()
+blinkColon()
 playMusic()
