@@ -169,7 +169,7 @@ function animate() {
         let joyY = gpIA[1]
         let fire = (gpIB[0].pressed && gpIB[0].touched) || (gpIB[1].pressed && gpIB[1].touched)
         
-        if (gpIB[0].pressed = true) {
+        if (fire) {
             score -= 1
             let angle = Math.atan2(joyY, joyX)
             let velocity = {
