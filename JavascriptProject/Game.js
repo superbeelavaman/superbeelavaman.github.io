@@ -162,6 +162,8 @@ function animate() {
     
     if (gamepad) {
         var gamepadInput = navigator.getGamepads();
+        console.log('Controller Connected!');
+        console.log(gamepadInput);
     }
 
     c.fillStyle = 'rgba(0, 0, 0, 0.1)'
