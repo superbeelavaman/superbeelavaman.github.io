@@ -160,7 +160,9 @@ let animationId
 function animate() {
     animationId = requestAnimationFrame(animate)
     
-    var gamepadInput = navigator.getGamepads();
+    if (gamepad) {
+        var gamepadInput = navigator.getGamepads();
+    }
 
     c.fillStyle = 'rgba(0, 0, 0, 0.1)'
     c.fillRect(0, 0, canvas.width, canvas.height)
@@ -256,7 +258,7 @@ addEventListener('click', (event) => {
     projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
 })
 
-const gamepad = null
+let gamepad = null
 window.addEventListener("gamepadconnected", (event) => {
   console.log("A gamepad connected:");
   console.log(event.gamepad);
