@@ -162,6 +162,22 @@ function animate() {
     
     if (gamepad) {
         var gamepadInput = navigator.getGamepads();
+        var gpIA = gamepadInput.item(1).axes
+        var gpIB = gamepadInput.item(1).buttons
+        
+        let joyY = gpIA[0]
+        let joyX = gpIA[1]
+        let fire = (gpIB[0].pressed && gpIB[0].touched) || (gpIB[1].pressed && gpIB[1].touched)
+        
+        if (fire = 1) {
+            score -= 1
+            let angle = Math.atan2(joyY, joyX)
+            let velocity = {
+                x: 5 * Math.cos(angle),
+                y: 5 * Math.sin(angle)
+            }
+            projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
+        }
     }
 
     c.fillStyle = 'rgba(0, 0, 0, 0.1)'
@@ -250,8 +266,8 @@ function animate() {
 
 addEventListener('click', (event) => {
     score -= 1
-    const angle = Math.atan2(event.clientY - canvas.height / 2, event.clientX - canvas.width / 2)
-    const velocity = {
+    let angle = Math.atan2(event.clientY - canvas.height / 2, event.clientX - canvas.width / 2)
+    let velocity = {
         x: 5 * Math.cos(angle),
         y: 5 * Math.sin(angle)
     }
