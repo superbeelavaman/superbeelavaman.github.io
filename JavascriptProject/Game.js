@@ -1,7 +1,7 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-const music = new Audio('./sound/music.wav');
+//const music = new Audio('./sound/music.wav');
 let score = 10
 let scoreText = '10'
 
@@ -159,6 +159,11 @@ function spawnEnemies() {
 let animationId
 function animate() {
     animationId = requestAnimationFrame(animate)
+    
+    if (gamepad) {
+        var gamepadInput = navigator.getGamepads()
+    }
+
     c.fillStyle = 'rgba(0, 0, 0, 0.1)'
     c.fillRect(0, 0, canvas.width, canvas.height)
     player.draw()
@@ -253,18 +258,19 @@ addEventListener('click', (event) => {
     projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
 })
 
-const gamepads = []
+const gamepad = null
 window.addEventListener("gamepadconnected", (event) => {
   console.log("A gamepad connected:");
   console.log(event.gamepad);
-  //gamepads.push(event.gamepad);
+  gamepad = event.gamepad
 });
 window.addEventListener("gamepaddisconnected", (event) => {
   console.log("A gamepad disconnected:");
   console.log(event.gamepad);
+  gamepad = null
 });
 
 animate()
 spawnEnemies()
 blinkColon()
-playMusic()
+//playMusic()
