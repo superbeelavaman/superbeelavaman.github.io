@@ -179,10 +179,10 @@ const gpD = new GamepadDir(0,0,10,'white')
 function animate() {
     animationId = requestAnimationFrame(animate)
     
-    if (gamepad) {
+    if (gamepad != null) {
         var gamepadInput = navigator.getGamepads();
-        var gpIA = gamepadInput.item(0).axes
-        var gpIB = gamepadInput.item(0).buttons
+        var gpIA = gamepadInput.item(gamepad).axes
+        var gpIB = gamepadInput.item(gamepad).buttons
         
         let joyX = gpIA[0]
         let joyY = gpIA[1]
@@ -303,7 +303,7 @@ let gamepad = null
 window.addEventListener("gamepadconnected", (event) => {
   console.log("A gamepad connected:");
   console.log(event.gamepad);
-  gamepad = event.gamepad
+  gamepad = event.gamepad.index
 });
 window.addEventListener("gamepaddisconnected", (event) => {
   console.log("A gamepad disconnected:");
