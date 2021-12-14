@@ -181,15 +181,16 @@ function animate() {
     
     if (gamepad) {
         var gamepadInput = navigator.getGamepads();
-        var gpIA = gamepadInput.item(1).axes
+        //var gpIA = gamepadInput.item(1).axes
+        var gpIA = [1,1,0,0]
         var gpIB = gamepadInput.item(1).buttons
         
         let joyX = gpIA[0]
         let joyY = gpIA[1]
         let fire = gpIB[0].pressed || gpIB[1].pressed
         
-        gpD.x = joyX
-        gpD.y = joyY
+        gpD.x = 30 * joyX
+        gpD.y = 30 * joyY
         gpD.draw()
         
         if (fire && !fireOld) {
