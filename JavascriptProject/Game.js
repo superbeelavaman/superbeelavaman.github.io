@@ -165,11 +165,11 @@ function animate() {
         var gpIA = gamepadInput.item(1).axes
         var gpIB = gamepadInput.item(1).buttons
         
-        let joyY = gpIA[0]
-        let joyX = gpIA[1]
+        let joyX = gpIA[0]
+        let joyY = gpIA[1]
         let fire = (gpIB[0].pressed && gpIB[0].touched) || (gpIB[1].pressed && gpIB[1].touched)
         
-        if (fire = 1) {
+        if (fire = true) {
             score -= 1
             let angle = Math.atan2(joyY, joyX)
             let velocity = {
