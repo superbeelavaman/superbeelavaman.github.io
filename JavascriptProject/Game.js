@@ -156,6 +156,7 @@ function spawnEnemies() {
     }, spawnRate)
 }
 
+let fireOld = 0
 let animationId
 function animate() {
     animationId = requestAnimationFrame(animate)
@@ -167,9 +168,10 @@ function animate() {
         
         let joyX = gpIA[0]
         let joyY = gpIA[1]
-        let fire = (gpIB[0].pressed && gpIB[0].touched) || (gpIB[1].pressed && gpIB[1].touched)
+        let fire = gpIB[0].pressed || gpIB[1].pressed
         
-        if (fire) {
+        
+        if (fire && !fireOld) {
             score -= 1
             let angle = Math.atan2(joyY, joyX)
             let velocity = {
@@ -178,6 +180,8 @@ function animate() {
             }
             projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
         }
+        fireOld = fire
+        
     }
 
     c.fillStyle = 'rgba(0, 0, 0, 0.1)'
