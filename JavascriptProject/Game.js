@@ -253,6 +253,17 @@ addEventListener('click', (event) => {
     projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
 })
 
+const gamepads = []
+window.addEventListener("gamepadconnected", (event) => {
+  console.log("A gamepad connected:");
+  console.log(event.gamepad);
+  //gamepads.push(event.gamepad);
+});
+window.addEventListener("gamepaddisconnected", (event) => {
+  console.log("A gamepad disconnected:");
+  console.log(event.gamepad);
+});
+
 animate()
 spawnEnemies()
 blinkColon()
