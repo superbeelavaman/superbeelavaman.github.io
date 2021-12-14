@@ -189,7 +189,7 @@ function animate() {
         let fire = gpIB[0].pressed || gpIB[1].pressed
         
         gpD.x = (canvas.height / 2) + (30 * (joyX + 1)
-        gpD.y = (canvas.width / 2) + (30 * (joyY - 1))
+        gpD.y = (canvas.width / 2) + (30 * (joyY + 1)
         gpD.draw()
         
         if (fire && !fireOld) {
