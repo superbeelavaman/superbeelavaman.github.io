@@ -98,6 +98,23 @@ class Particle {
     }
 }
 
+class GamepadDir {
+    constructor(x, y, radius, color) {
+        this.x = x
+        this.y = y
+        this.radius = radius
+        this.color = color
+    }
+
+    draw() {
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
+        c.fillStyle = this.color
+        c.fill()
+    }
+}
+
+
 const x = canvas.width / 2
 const y = canvas.height / 2
 
@@ -158,6 +175,7 @@ function spawnEnemies() {
 
 let fireOld = 0
 let animationId
+const gpD = new GamepadDir(0,0,10,'white')
 function animate() {
     animationId = requestAnimationFrame(animate)
     
@@ -170,6 +188,9 @@ function animate() {
         let joyY = gpIA[1]
         let fire = gpIB[0].pressed || gpIB[1].pressed
         
+        gpD.x = joyX
+        gpD.y = joyY
+        gpD.draw()
         
         if (fire && !fireOld) {
             score -= 1
