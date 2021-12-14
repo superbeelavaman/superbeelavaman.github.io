@@ -181,9 +181,8 @@ function animate() {
     
     if (gamepad) {
         var gamepadInput = navigator.getGamepads();
-        //var gpIA = gamepadInput.item(1).axes
-        var gpIA = [1,1,0,0]
-        var gpIB = gamepadInput.item(1).buttons
+        var gpIA = gamepadInput.item(0).axes
+        var gpIB = gamepadInput.item(0).buttons
         
         let joyX = gpIA[0]
         let joyY = gpIA[1]
