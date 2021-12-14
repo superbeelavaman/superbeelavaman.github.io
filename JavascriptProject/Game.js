@@ -186,7 +186,7 @@ function animate() {
         
         let joyX = gpIA[0]
         let joyY = gpIA[1]
-        let fire = gpIB[0].pressed || gpIB[1].pressed
+        let fire = gpIB[0].pressed || gpIB[1].pressed || gpIB[6].pressed || gpIB[7].pressed
         
         gpD.x = x + (30 * joyX)
         gpD.y = y + (30 * joyY)
@@ -284,7 +284,7 @@ function animate() {
     }
     c.font = '30px DSEG14';
     c.fillStyle = 'rgba(64, 0, 0, 1)'
-    c.fillText(`~~~~~:~~~~~`, 10, 40)
+    c.fillText(`~.~.~.~.~:~.~.~.~.~`, 10, 40)
     c.fillStyle = 'rgba(255, 0, 0, 1'
     c.fillText(`Score${bColon}${scoreText}`, 10, 40)
 }
