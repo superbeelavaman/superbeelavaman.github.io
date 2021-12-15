@@ -136,9 +136,7 @@ function blinkColon() {
 }
 
 function playMusic() {
-    setInterval(() => {
-        music.play();
-    },music.duration)
+    setInterval(() => { music.play(); },music.duration)
 }
 
 let spawnSpeed = 0.5
@@ -200,6 +198,7 @@ function animate() {
                 x: 5 * Math.cos(angle),
                 y: 5 * Math.sin(angle)
             }
+            shoot.play()
             projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
         }
         fireOld = fire
@@ -297,6 +296,7 @@ addEventListener('click', (event) => {
         x: 5 * Math.cos(angle),
         y: 5 * Math.sin(angle)
     }
+    shoot.play()
     projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
 })
 
