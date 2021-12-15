@@ -138,7 +138,7 @@ function blinkColon() {
 function playMusic() {
     setInterval(() => {
         music.play();
-    },16000)
+    },music.duration)
 }
 
 let spawnSpeed = 0.5
