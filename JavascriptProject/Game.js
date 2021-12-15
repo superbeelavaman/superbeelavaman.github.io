@@ -315,4 +315,4 @@ window.addEventListener("gamepaddisconnected", (event) => {
 animate()
 spawnEnemies()
 blinkColon()
-//playMusic()
+playMusic()
