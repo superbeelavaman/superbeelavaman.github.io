@@ -1,7 +1,8 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-//const music = new Audio('./sound/music.wav');
+const music = new Audio('./sound/Music.wav');
+const shoot = new Audio('./sound/Shoot.wav');
 let score = 10
 let scoreText = '10'
 
