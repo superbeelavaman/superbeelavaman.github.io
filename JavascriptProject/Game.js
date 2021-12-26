@@ -2,7 +2,7 @@ const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
 const music = new Audio('./sound/Music.wav');
-const shoot = new Audio('./sound/Shoot.wav');
+const shootSound = './sound/Shoot.wav';
 let score = 10
 let scoreText = '10'
 
@@ -198,7 +198,7 @@ function animate() {
                 x: 5 * Math.cos(angle),
                 y: 5 * Math.sin(angle)
             }
-            shoot.play()
+            new Audio(shootSound).play()
             projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
         }
         fireOld = fire
