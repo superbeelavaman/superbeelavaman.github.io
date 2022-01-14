@@ -1,8 +1,8 @@
-class NitroBlock {
+class MyBlocks {
     getInfo() {
         return {
-            "id": "NitroBlock",
-            "name": "NitroBlock",
+            "id": "MyBlocks",
+            "name": "My blocks",
             "blocks": [{
                     "opcode": "substringy",
                     "blockType": "reporter",
