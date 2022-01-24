@@ -296,8 +296,8 @@ addEventListener('click', (event) => {
         x: 5 * Math.cos(angle),
         y: 5 * Math.sin(angle)
     }
-    shoot.play()
     projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
+    shoot.play()
 })
 
 let gamepad = null
