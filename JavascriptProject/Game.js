@@ -3,8 +3,8 @@ const c = canvas.getContext('2d')
 
 const music = new Audio('./sound/Music.wav');
 const shootSound = './sound/Shoot.wav';
-let score = 10
-let scoreText = '10'
+let score
+let scoreText
 
 canvas.width = innerWidth
 canvas.height = innerHeight
