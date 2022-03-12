@@ -183,23 +183,25 @@ function animate() {
         var gpIA = gamepadInput.item(gamepad).axes
         var gpIB = gamepadInput.item(gamepad).buttons
         
-        let joyX = gpIA[0]
-        let joyY = gpIA[1]
+        let ljoyX = gpIA[0]
+        let ljoyY = gpIA[1]
+        let rjoyX = gpIA[2]
+        let rjoyY = gpIA[3]
         let fire = gpIB[0].pressed || gpIB[1].pressed || gpIB[6].pressed || gpIB[7].pressed
         
-        gpD.x = x + (30 * joyX)
-        gpD.y = y + (30 * joyY)
+        gpD.x = x + (30 * rjoyX)
+        gpD.y = y + (30 * rjoyY)
         gpD.draw()
         
         if (fire && !fireOld) {
             score -= 1
-            let angle = Math.atan2(joyY, joyX)
+            let angle = Math.atan2(rjoyY, rjoyX)
             let velocity = {
                 x: 5 * Math.cos(angle),
                 y: 5 * Math.sin(angle)
             }
             new Audio(shootSound).play()
-            projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
+            projectiles.push(new Projectile(player.x, player.y, 5, 'white', velocity))
         }
         fireOld = fire
         
@@ -296,7 +298,7 @@ addEventListener('click', (event) => {
         x: 5 * Math.cos(angle),
         y: 5 * Math.sin(angle)
     }
-    projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
+    projectiles.push(new Projectile(player.x, player.y, 5, 'white', velocity))
     shoot.play()
 })
 
