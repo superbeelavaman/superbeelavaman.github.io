@@ -303,20 +303,20 @@ addEventListener('click', (event) => {
 })
 
 let gamepad = null
-addEventListener("gamepadconnected", (event) => {
+window.addEventListener("gamepadconnected", (event) => {
   console.log("A gamepad connected:");
   console.log(event.gamepad);
   gamepad = event.gamepad.index
 });
-addEventListener("gamepaddisconnected", (event) => {
+window.addEventListener("gamepaddisconnected", (event) => {
   console.log("A gamepad disconnected:");
   console.log(event.gamepad);
   gamepad = null
 });
 
-addEventListener("keypress", (event) => {
-  if (event.keyCode == 80) {
-    alert('Test. Will be  replaced with pause.');
+document.addEventListener("keypress", (event) => {
+  if (event.key = 'p') {
+    alert('Test. Will be replaced with pause.');
   }
 });
 
