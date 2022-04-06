@@ -316,7 +316,7 @@ window.addEventListener("gamepaddisconnected", (event) => {
 
 document.addEventListener("keypress", (event) => {
   if (event.key = 'p') {
-    alert('Test. Will be replaced with pause.');
+    alert('Game Paused. press OK to unpause.');
   }
 });
 
