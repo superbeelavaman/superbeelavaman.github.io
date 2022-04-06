@@ -303,15 +303,21 @@ addEventListener('click', (event) => {
 })
 
 let gamepad = null
-window.addEventListener("gamepadconnected", (event) => {
+addEventListener("gamepadconnected", (event) => {
   console.log("A gamepad connected:");
   console.log(event.gamepad);
   gamepad = event.gamepad.index
 });
-window.addEventListener("gamepaddisconnected", (event) => {
+addEventListener("gamepaddisconnected", (event) => {
   console.log("A gamepad disconnected:");
   console.log(event.gamepad);
   gamepad = null
+});
+
+addEventListener("keypress", (event) => {
+  if (event.keyCode == 80) {
+    alert('Test. Will be  replaced with pause.');
+  }
 });
 
 animate()
