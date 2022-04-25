@@ -314,6 +314,12 @@ window.addEventListener("gamepaddisconnected", (event) => {
   gamepad = null
 });
 
+document.addEventListener("keypress", (event) => {
+  if (event.key = 'p') {
+    alert('Game Paused. press OK to unpause.');
+  }
+});
+
 animate()
 spawnEnemies()
 blinkColon()
