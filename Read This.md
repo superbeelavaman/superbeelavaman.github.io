@@ -28,7 +28,7 @@ Never gonna run around and desert you
 Never gonna make you cry  
 Never gonna say goodbye  
 Never gonna tell a lie and hurt you  
-Never gonna give, never gonna give  
+Never gonna give, never gonna give,  
 ***Give you up***  
 We've known each other for so long  
 Your heart's been aching but you're too shy to say it  
