@@ -4,6 +4,7 @@ body {
 	font-smooth: never;
 	font: 15px/30px 'SilkscreenNormal', Arial, sans-serif;
 	margin: 0;
+	cursor: url(Images/my-cursor.png), auto;
 }
 
 div {
