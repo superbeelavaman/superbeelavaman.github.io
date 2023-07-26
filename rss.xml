@@ -18,7 +18,10 @@
 		</skiphours>
 		<item>
 			<title>I'm making an RSS feed!</title>
-			<description>I'm not capable of finding things to write about.<br>(This probably won't be updated often)</description>
+			<description>
+I'm not capable of finding things to write about.
+(This probably won't be updated often)
+			</description>
 			<pubDate>Wed, 26 Jul 2023 06:30:00</pubDate>
 		</item>
 	</channel>
