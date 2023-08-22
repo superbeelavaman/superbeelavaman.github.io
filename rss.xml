@@ -17,12 +17,9 @@
 			<hour>16</hour>
 		</skiphours>
 		<item>
-			<title>I'm making an RSS feed!</title>
-			<description>
-I'm not capable of finding things to write about.
-(This probably won't be updated often)
-			</description>
-			<pubDate>Wed, 26 Jul 2023 06:30:00</pubDate>
+			<title>Beans</title>
+			<description>Get Beaned</description>
+			<pubDate>Wed, 21 Aug 2023 17:30:00</pubDate>
 		</item>
 	</channel>
 </rss>
